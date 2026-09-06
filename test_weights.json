@@ -1,0 +1,12 @@
+[
+  {"test_name": "test_sensitivity_file_exists", "weight": 3},
+  {"test_name": "test_recommendation_file_exists", "weight": 3},
+  {"test_name": "test_sensitivity_columns_exact", "weight": 4},
+  {"test_name": "test_sensitivity_row_count", "weight": 4},
+  {"test_name": "test_sensitivity_crop_values_valid", "weight": 4},
+  {"test_name": "test_n_years_reasonable", "weight": 5},
+  {"test_name": "test_correlations_match_recomputed_ground_truth", "weight": 8},
+  {"test_name": "test_decision_line_present_and_valid_token", "weight": 4},
+  {"test_name": "test_decision_matches_ground_truth", "weight": 20, "decision": true},
+  {"test_name": "test_excluded_crop_correlation_clearly_lowest", "weight": 10, "decision": true}
+]

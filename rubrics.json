@@ -1,0 +1,229 @@
+[
+  {
+    "item": 1,
+    "weight": 15,
+    "criterion": "The **Exclude:** line in output/recommendation.md names Maize as the crop to drop, not Cotton(lint), Wheat, or Groundnut.",
+    "category": "recommend",
+    "verification_type": "text",
+    "is_recommendation_criterion": true,
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 2,
+    "weight": 15,
+    "criterion": "The Key Findings section of output/recommendation.md reports Maize's yield_rainfall_correlation as clearly the lowest of the four crops, at least 0.25 below the next-lowest crop's value.",
+    "category": "recommend",
+    "verification_type": "text",
+    "is_recommendation_criterion": true,
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 3,
+    "weight": 10,
+    "criterion": "The Key Findings section of output/recommendation.md reports Cotton(lint), Wheat, and Groundnut's yield_rainfall_correlation values as all positive and each above 0.5.",
+    "category": "recommend",
+    "verification_type": "text",
+    "is_recommendation_criterion": true,
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 4,
+    "weight": 5,
+    "criterion": "output/crop_rainfall_sensitivity.csv has a header row with exactly these three columns in this order: crop, n_years, yield_rainfall_correlation.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/crop_rainfall_sensitivity.csv"]
+  },
+  {
+    "item": 5,
+    "weight": 5,
+    "criterion": "output/crop_rainfall_sensitivity.csv contains exactly 4 data rows, one per crop, plus the header row.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/crop_rainfall_sensitivity.csv"]
+  },
+  {
+    "item": 6,
+    "weight": 4,
+    "criterion": "Every crop value in output/crop_rainfall_sensitivity.csv is exactly one of Cotton(lint), Wheat, Groundnut, or Maize, with no other spelling or variant.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/crop_rainfall_sensitivity.csv"]
+  },
+  {
+    "item": 7,
+    "weight": 4,
+    "criterion": "output/recommendation.md contains a heading exactly named '## Key Findings'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 8,
+    "weight": 4,
+    "criterion": "output/recommendation.md contains a heading exactly named '## Rationale'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 9,
+    "weight": 4,
+    "criterion": "output/recommendation.md contains a heading exactly named '## Risks and Caveats'.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 10,
+    "weight": 5,
+    "criterion": "The Rationale section of output/recommendation.md is at least 150 words long.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 11,
+    "weight": 5,
+    "criterion": "The Risks and Caveats section names at least one specific limitation of the correlation analysis, rather than a generic disclaimer with no stated limitation.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 12,
+    "weight": 5,
+    "criterion": "The Rationale section explains the concept of rainfall sensitivity in terms of a comparison between the excluded crop and the other three, not merely a restatement of the numbers.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 13,
+    "weight": 6,
+    "criterion": "The Rationale section or Risks and Caveats section acknowledges that the two source files used inconsistent year formats (a fiscal-year label in part of the crop data) that had to be resolved before joining them.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 14,
+    "weight": 6,
+    "criterion": "The Rationale section offers at least one possible explanation for why the excluded crop's yield might be comparatively insulated from rainfall variation (such as irrigation access or growing-season timing).",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 15,
+    "weight": 6,
+    "criterion": "The Rationale section references the number of years of historical data underlying the correlation figures.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 16,
+    "weight": 5,
+    "criterion": "The Rationale section does not rely on the fund committee meeting notes (crop prices, cooperative interest, optics of dropping the largest crop, or the 2015 pest outbreak) as primary justification for which crop to exclude.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 17,
+    "weight": 4,
+    "criterion": "The yield_rainfall_correlation values stated in the Key Findings section of output/recommendation.md are consistent with, and not contradicted by, the values in output/crop_rainfall_sensitivity.csv.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md", "output/crop_rainfall_sensitivity.csv"]
+  },
+  {
+    "item": 18,
+    "weight": 4,
+    "criterion": "The Rationale section explains why at least one of the other three crops was not chosen for exclusion despite being a plausible candidate (for example, its size, importance, or prominence in the committee discussion).",
+    "category": "hypothesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 19,
+    "weight": 3,
+    "criterion": "The Rationale section refers to each of the four crops by name at least once, rather than referring to them only as 'the crops' throughout.",
+    "category": "explore",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 20,
+    "weight": 4,
+    "criterion": "All yield_rainfall_correlation values in output/crop_rainfall_sensitivity.csv are reported to exactly 3 decimal places.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/crop_rainfall_sensitivity.csv"]
+  },
+  {
+    "item": 21,
+    "weight": 3,
+    "criterion": "Both required output files, output/crop_rainfall_sensitivity.csv and output/recommendation.md, are present; no required deliverable is missing.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/crop_rainfall_sensitivity.csv", "output/recommendation.md"]
+  },
+  {
+    "item": 22,
+    "weight": 3,
+    "criterion": "output/recommendation.md is a non-empty Markdown file with visibly distinct section headings, not a placeholder.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 23,
+    "weight": 3,
+    "criterion": "The Rationale section reflects that the underlying data covers all four candidate crops, not only the one being excluded.",
+    "category": "explore",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 24,
+    "weight": 3,
+    "criterion": "The n_years value reported for each crop in output/crop_rainfall_sensitivity.csv is at least 20, indicating the fiscal-year-labeled rows were joined rather than silently dropped.",
+    "category": "instruction_following",
+    "verification_type": "file_structure",
+    "grades_output_files": ["output/crop_rainfall_sensitivity.csv"]
+  },
+  {
+    "item": 25,
+    "weight": 4,
+    "criterion": "The Rationale section describes the gap between the excluded crop's correlation and the other three crops' correlations as large or substantial, not as a marginal or close call.",
+    "category": "analyze",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 26,
+    "weight": 3,
+    "criterion": "The Exclude line, the Key Findings section, and the Rationale section of output/recommendation.md all name the same crop as the one being excluded, with no contradiction between sections.",
+    "category": "synthesize",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 27,
+    "weight": -6,
+    "criterion": "PENALTY: output/recommendation.md states a correlation value or year count that does not appear in, and cannot be derived from, output/crop_rainfall_sensitivity.csv.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  },
+  {
+    "item": 28,
+    "weight": -6,
+    "criterion": "PENALTY: the Exclude line of output/recommendation.md names a crop as excluded while the Key Findings section reports that same crop's correlation as the HIGHEST, not the lowest, of the four -- a direct contradiction.",
+    "category": "instruction_following",
+    "verification_type": "text",
+    "grades_output_files": ["output/recommendation.md"]
+  }
+]

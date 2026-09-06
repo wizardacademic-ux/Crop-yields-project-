@@ -1,0 +1,10 @@
+[task]
+id = "gujarat-drought-resilience-v1"
+title = "Drought-Resilience Program Crop Prioritization"
+domain = "agriculture-policy"
+difficulty_target_strong = 0.6
+difficulty_target_weak = 0.35
+
+[limits]
+timeout_seconds = 1800
+max_output_bytes = 5000000
